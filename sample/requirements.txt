@@ -1,0 +1,7 @@
+django
+selenium
+requests
+django-otp
+random
+fpdf
+reportlab

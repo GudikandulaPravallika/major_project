@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch WhatsApp Messages</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        /* Inline CSS for demonstration, replace with styles.css for better practice */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-size: 16px;
+            color: #555555;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 90%;
+            padding: 15px;
+            margin-bottom: 40px;
+            border: 1px solid bold;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #DD6368;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #DD6368;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666666;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Fetch WhatsApp Messages</h1>
+        <form method="post">
+            {% csrf_token %}
+            <label for="chat_name">Chat Name:</label>
+            <input type="text" id="chat_name" name="chat_name" placeholder="Enter chat name" required>
+            <button type="submit">Fetch Messages</button>
+        </form>
+        <p>Enter the chat name and fetch messages in a PDF format.</p>
+    </div>
+</body>
+</html>
