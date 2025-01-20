@@ -12,5 +12,6 @@ urlpatterns = [
     path('home/', views.home, name='home'),
     path('web_scrapping/', views.web_scrapping,name="web_scrapping"),
     path("fetch-whatsapp/", views.fetch_whatsapp_data_view, name="fetch_whatsapp"), 
+    path("fetch-result/",views.fetch_result,name="fetch_result"),
     
 ]

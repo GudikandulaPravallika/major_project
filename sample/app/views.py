@@ -204,3 +204,6 @@ def fetch_whatsapp_data_view(request):
 @login_required
 def web_scrapping(request):
     return render(request,"web_scrapping.html")
+
+def fetch_result(request):
+    return render(request,"fetch_result.html")
