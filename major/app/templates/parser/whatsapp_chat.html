@@ -1,0 +1,15 @@
+<!-- parser/templates/parser/whatsapp_chat.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WhatsApp Chat Parser</title>
+</head>
+<body>
+    <h1>Parse WhatsApp Chat</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Parse</button>
+    </form>
+</body>
+</html>
